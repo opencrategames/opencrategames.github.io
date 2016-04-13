@@ -9,6 +9,41 @@
 
 <!-- Latest compiled JavaScript -->
 <script src="js/bootstrap.min.js"></script>
+<style type="text/css">
+
+ iframe[id^='twitter-widget-0'] {
+
+ height:600px !important;
+
+ margin-bottom:10px !important;
+
+ width:100% !important; 
+
+}
+
+</style>
+
+<script type="text/javascript">
+
+ $(window).on('load', function () {
+
+ $('iframe[id^=twitter-widget-]').each(function () {
+
+ var head = $(this).contents().find('head');
+
+ if (head.length) {
+
+ head.append('<style>.timeline { max-width: 100% !important; width: 100% !important; } .timeline .stream { max-width: none !important; width: 100% !important; }</style>');
+
+ }
+
+ $('#twitter-widget-0').append($('<div class=timeline>'));
+
+ })
+
+ });
+
+</script>
 	
 		<title>
 			Open Crate Games
@@ -17,22 +52,15 @@
 	<body>
 	<div class="container">
 		<div class="jumbotron text-center" style="background-color: white;">
-			<h1>Open Crate Games</h1> 
-			<p>Our website is currently under construction, but we are updating.</p> 
-			<img src="ocg.jpg" class="img-responsive" height="30%" width="30%" style="margin: 0 auto; align-top: 5%;">
+			<img src="ocg.jpg" class="img-responsive" style="float:left" width="20%"><h1 style="float:left; padding-top: 30px; padding-bottom: 30px;">Open Crate Games</h1>
 		</div>
-	<div class="jumbotron">
-		<!-- 4.12.2016 log start-->
-		<h3>The Beginning</h3><h6 style="color:gray;">April 12, 2016</h6>
-		<hr>
-		So we're technically live! We are not prepared for what road lies ahead, but we are willing to learn from our mistakes and make something for the people.
-		 Either it is a game or a program, we will prepare ourselves for it.
-		<p></p>On a side note, the way this is currently managed will be completely changed, as will the design of the website.
-		<hr>
-		<!-- 4.12.2016 log end-->
-	</div>
 </div>
-
+<p></p>
+	<div class="container">
+		<div class="jumbotron" style="background-color:white;"><a class="twitter-timeline" data-dnt="true" href="https://twitter.com/OpenCrateGame" data-widget-id="720119878162767872">Tweets by @OpenCrateGame</a>
+<script>!function(d,s,id){var 
+js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+"://platform.twitter.com/widgets.js";fjs.parentNode.insertBefore(js,fjs);}}(document,"script","twitter-wjs");</script></div>
+	</div>
 	</body>
 <!--So git works-->
 </html>
